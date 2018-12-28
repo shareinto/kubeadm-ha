@@ -1,8 +1,24 @@
-CP0_IP=10.130.29.80
-CP0_HOSTNAME=centos-7-x86-64-29-80
-CP1_IP=10.130.29.81
-CP1_HOSTNAME=centos-7-x86-64-29-81
-CP2_IP=10.130.29.82
-CP2_HOSTNAME=centos-7-x86-64-29-82
-VIP=10.130.29.83
-NET_IF=ens32
+#interface for keepalived
+NET_IF=eth0
+# vip for keepalived
+VIP=192.168.138.250
+#docker version
+DOCKER_VERSION=18.06.1.ce-3.el7.x86_64
+#kubernetes version
+KUBE_VERSION=1.11.3-0
+# control plan ips except the main plane
+CONTROL_PLANE_IPS="192.168.138.129 192.168.138.130"
+# main control plane ip
+MAIN_PLANE_IP=192.168.138.128
+# pod cidr
+POD_CIDR=10.96.0.0/16
+# service cidr
+SERVICE_CIDR=10.112.0.0/16
+# cgroup driver
+CGROUP_DRIVER=systemd
+# kubernetes image repository
+IMAGE_REPOSITORY=shareinto
+# etcd image
+ETCD_IMAGE=shareinto/etcd-amd64:3.2.18
+# pause image
+PAUSE_IMAGE=shareinto/pause:3.1
